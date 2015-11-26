@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collectionview create</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)setupCollectionView
+{
+    UICollectionViewFlowLayout *flowLayout=[[UICollectionViewFlowLayout alloc] init];
+    [flowLayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+    flowLayout.minimumLineSpacing = 5;
+    UICollectionView *collectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:flowLayout];
+    
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    
+    [self.view addSubview:collectionView];
+    
+    [collectionView registerClass:[UICollectionViewCell class]forCellWithReuseIdentifier:@"cell"];
+    
+    WeakSelf(weakSelf);
+    [collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.schoolImageView.mas_bottom).with.offset(0);
+        make.left.equalTo(weakSelf.view.mas_left).with.offset(0);
+        make.right.equalTo(weakSelf.view.mas_right).with.offset(0);
+        make.bottom.equalTo(weakSelf.view.mas_bottom).with.offset(0);
+    }];
+    
+    self.collectionView = collectionView;
+    
+    collectionView.backgroundColor = [UIColor randomColor];
+}
+
+
+#pragma mark - 代理和数据源
+#pragma mark - collectionView delegate &amp; datasource
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView*)collectionView{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 3;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView*)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *identify = @"cell";
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor randomColor];
+    return cell;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake(ScreenWidth - 10, 100);
+}
+
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    UIEdgeInsets top = {5,0,0,0};
+    return top;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>864672FB-22D3-440F-A32B-EDAD68164205</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UICollectionView 创建</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
