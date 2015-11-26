@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>get method</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>Preprocessor</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (&lt;#NSArray#&gt;*)&lt;#everyDayTaskArray#&gt;
+{
+    if(_&lt;#everyDayTaskArray#&gt; == nil)
+    {
+        &lt;#_everyDayTaskArray#&gt; = &lt;#[NSArray arrayWithObjects:model1, nil]#&gt;;
+    }
+    return _&lt;#everyDayTaskArray#&gt;;
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>88B6E7F7-CCA7-48FC-81C0-F7AC1EB89CF9</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>get 方法</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>button</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn addTarget:self action:@selector(commitAdvice:) forControlEvents:UIControlEventTouchUpInside];
+    UIImage *image = [UIImage imageNamed:@"btn_big_n"];
+    UIImage *himage = [UIImage imageNamed:@"btn_big_h"];
+    UIImage *dimage = [UIImage imageNamed:@"btn_big_d"];
+    [btn setBackgroundImage:image forState:UIControlStateNormal];
+    [btn setBackgroundImage:himage forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:dimage forState:UIControlStateDisabled];
+    [self.view addSubview:btn];
+    self.commitBtn = btn;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4A0F9BBB-0D62-4E53-889F-DCFF563DB3EF</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>创建button</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

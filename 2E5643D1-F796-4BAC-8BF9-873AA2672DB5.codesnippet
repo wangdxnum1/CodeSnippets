@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create button</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateHighlighted ];
+    UIImage *image = [UIImage imageNamed:@"btn_buy_n"];
+    UIImage *highlightedImage = [UIImage imageNamed:@"btn_buy_h"];
+    UIImage *disableImage = [UIImage imageNamed:@"btn_buy_d"];
+    
+    [btn setBackgroundImage:image forState:UIControlStateNormal];
+    [btn setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:disableImage forState:UIControlStateDisabled];
+    self.buyBtn = btn;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2E5643D1-F796-4BAC-8BF9-873AA2672DB5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>新建按钮</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

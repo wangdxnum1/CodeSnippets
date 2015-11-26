@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>imageView create</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIImageView *avatarImageView = [[UIImageView alloc]init];
+    avatarImageView.layer.cornerRadius = kAvatarAvatarHeight / 2;
+    avatarImageView.clipsToBounds = YES;
+    avatarImageView.image = [UIImage imageNamed:@"hear_dzlb"];
+    [self.contentView addSubview:avatarImageView];
+    self.avatarImageView = avatarImageView;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7F302E53-AB57-4586-B46D-7BBED0027FCB</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>创建UIImageView</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

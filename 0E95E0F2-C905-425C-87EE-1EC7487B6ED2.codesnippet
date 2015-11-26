@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>sizeForFramw</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>UIFont *font = [UIFont systemFontOfSize:&lt;#15#&gt;];
+CGSize size = CGSizeMake(&lt;#SCREEN_WIDTH - 4 * kTopicTextPadding#&gt;, MAXFLOAT);
+UIColor *foregroundColor = [UIColor colorWithHex:&lt;#0x474747#&gt;];
+    NSDictionary *attributes = @{NSFontAttributeName : font,
+                                 NSForegroundColorAttributeName: foregroundColor};
+    NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+CGRect textFrame = [&lt;#topic.text#&gt; boundingRectWithSize:size
+                                       options:options
+                                    attributes:attributes
+                                       context:nil];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>0E95E0F2-C905-425C-87EE-1EC7487B6ED2</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>根据NSString计算Frame</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
