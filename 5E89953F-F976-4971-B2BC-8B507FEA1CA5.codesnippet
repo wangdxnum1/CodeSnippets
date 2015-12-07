@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>button with masonry</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [btn addTarget:self action:@selector(viewMoreClubs:) forControlEvents:UIControlEventTouchUpInside];
+    [btn setTitle:@"查看更多" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.contentView addSubview:btn];
+    self.moreBtn = btn;
+    
+    CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
+    NSDictionary *attributes = @{NSFontAttributeName : btn.titleLabel.font,
+                                 NSForegroundColorAttributeName: btn.titleLabel.textColor};
+    
+    NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+    CGRect textFrame = [btn.currentTitle boundingRectWithSize:size
+                                                                  options:options
+                                                               attributes:attributes
+                                                                  context:nil];
+    
+    WeakSelf(weakSelf);
+    [self.moreBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.equalTo(weakSelf.clubRecommendTitleLable.mas_bottom).with.offset(0);
+        make.right.equalTo(weakSelf.contentView.mas_right).with.offset(-16);
+        make.size.mas_equalTo(textFrame.size);
+    }];
+    
+    //btn.backgroundColor = [UIColor randomColor];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5E89953F-F976-4971-B2BC-8B507FEA1CA5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>常见button with masonry</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
