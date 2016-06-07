@@ -9,12 +9,12 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UILabel *contactLabel = [[UILabel alloc]init];
-    contactLabel.text = @"";
-    contactLabel.textColor = [UIColor colorWithHex:0xb8b8b8];
-    contactLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:contactLabel];
-    self.contactLabel = contactLabel;</string>
+	<string>    UILabel *label = [[UILabel alloc]init];
+    label.text = @"";
+    label.textColor = [UIColor colorWithHex:0xb8b8b8];
+    label.font = [UIFont systemFontOfSize:15];
+    [self.view addSubview:label];
+    self.contactLabel = label;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E4F7D51D-C8AB-4403-85FC-70B061C22B8B</string>
 	<key>IDECodeSnippetLanguage</key>
