@@ -3,24 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tableview create</string>
+	<string>getmethod</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
-		<string>CodeBlock</string>
+		<string>ClassImplementation</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView = tableView;
-    [self addSubview:tableView];</string>
+	<string>- (&lt;#NSMutableArray#&gt;*)&lt;#articels#&gt;{
+    if(_&lt;#articels#&gt; == nil){
+        _&lt;#articels#&gt; = [&lt;#NSMutableArray array#&gt;];
+    }
+    return _&lt;#articels#&gt;;
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6D6BC65D-CBF2-401F-8CFD-729F1D6D2BFB</string>
+	<string>AC6214CF-57ED-4290-85BB-BD2A7945007B</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>创建tableview</string>
+	<string>Get Method</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

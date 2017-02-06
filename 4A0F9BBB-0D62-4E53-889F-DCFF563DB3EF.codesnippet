@@ -9,16 +9,20 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn addTarget:self action:@selector(commitAdvice:) forControlEvents:UIControlEventTouchUpInside];
-    UIImage *image = [UIImage imageNamed:@"btn_big_n"];
-    UIImage *himage = [UIImage imageNamed:@"btn_big_h"];
-    UIImage *dimage = [UIImage imageNamed:@"btn_big_d"];
-    [btn setBackgroundImage:image forState:UIControlStateNormal];
-    [btn setBackgroundImage:himage forState:UIControlStateHighlighted];
-    [btn setBackgroundImage:dimage forState:UIControlStateDisabled];
-    [self.view addSubview:btn];
-    self.commitBtn = btn;</string>
+	<string>UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+[btn addTarget:self action:@selector(answerBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+[self addSubview:btn];
+self.&lt;#answerBtn#&gt; = btn;
+[self.&lt;#answerBtn#&gt; customButtonWithType:UIButtonCustomType_Four];
+
+[btn setTitle:@"已有账号,开始答题" forState:UIControlStateNormal];
+WeakSelf(weakSelf);
+[self.&lt;#answerBtn#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.height.mas_equalTo(52);
+    make.left.mas_equalTo(weakSelf.registerLabel);
+    make.top.mas_equalTo(weakSelf.answerLabel);
+    make.width.mas_equalTo(190);
+}];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>4A0F9BBB-0D62-4E53-889F-DCFF563DB3EF</string>
 	<key>IDECodeSnippetLanguage</key>

@@ -3,24 +3,30 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tableview create</string>
+	<string>line</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView = tableView;
-    [self addSubview:tableView];</string>
+	<string>UIView *line = [[UIView alloc]initWithFrame:CGRectZero];
+    line.backgroundColor = DJDRGBColor(199, 200, 201);
+    [self.rightView addSubview:line];
+
+    [line mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(28);
+        make.centerY.mas_equalTo(view);
+        make.left.mas_equalTo(view);
+        make.width.mas_equalTo(kOnePixLine);
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6D6BC65D-CBF2-401F-8CFD-729F1D6D2BFB</string>
+	<string>0768F33F-63CE-4889-81A0-C1FD7287A50C</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>line create</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>创建tableview</string>
+	<string>line create</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

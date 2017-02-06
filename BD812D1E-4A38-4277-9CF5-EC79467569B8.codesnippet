@@ -2,25 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>tableview create</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UITableView *tableView = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView = tableView;
-    [self addSubview:tableView];</string>
+	<string>UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
+    [self.contentView addSubview:view];
+    self.rightView = view;
+    WeakSelf(weakSelf);
+    [self.rightView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(weakSelf.contentView.mas_top);
+        make.bottom.equalTo(weakSelf.contentView.mas_bottom);
+        make.right.mas_equalTo(weakSelf.contentView);
+        make.width.mas_equalTo(2 * kRightViewPadding + 17);
+    }];</string>
 	<key>IDECodeSnippetIdentifier</key>
-	<string>6D6BC65D-CBF2-401F-8CFD-729F1D6D2BFB</string>
+	<string>BD812D1E-4A38-4277-9CF5-EC79467569B8</string>
 	<key>IDECodeSnippetLanguage</key>
 	<string>Xcode.SourceCodeLanguage.Objective-C</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>创建tableview</string>
+	<string>My Code Snippet</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>

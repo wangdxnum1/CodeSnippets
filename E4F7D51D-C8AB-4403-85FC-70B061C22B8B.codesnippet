@@ -9,12 +9,23 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>    UILabel *contactLabel = [[UILabel alloc]init];
-    contactLabel.text = @"";
-    contactLabel.textColor = [UIColor colorWithHex:0xb8b8b8];
-    contactLabel.font = [UIFont systemFontOfSize:15];
-    [self.view addSubview:contactLabel];
-    self.contactLabel = contactLabel;</string>
+	<string>UILabel *label = [[UILabel alloc]initWithFrame:CGRectZero];
+label.textColor = [UIColor whiteColor];
+label.font = [UIFont systemFontOfSize:18];
+label.textAlignment = NSTextAlignmentCenter;
+
+[self.&lt;#topView#&gt; addSubview:label];
+self.&lt;#expectAmountLabel#&gt; = label;
+
+label.text = @"期望借款金额";
+
+WeakSelf(weakSelf);
+[self.&lt;#expectAmountLabel#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
+    make.top.mas_equalTo(weakSelf.topView.mas_top).with.offset(60);
+    make.left.mas_equalTo(weakSelf.topView);
+    make.right.mas_equalTo(weakSelf.topView);
+    make.height.mas_equalTo(18);
+}];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>E4F7D51D-C8AB-4403-85FC-70B061C22B8B</string>
 	<key>IDECodeSnippetLanguage</key>

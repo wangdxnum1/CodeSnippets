@@ -9,16 +9,16 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>UIFont *font = [UIFont systemFontOfSize:&lt;#15#&gt;];
-CGSize size = CGSizeMake(&lt;#SCREEN_WIDTH - 4 * kTopicTextPadding#&gt;, MAXFLOAT);
-UIColor *foregroundColor = [UIColor colorWithHex:&lt;#0x474747#&gt;];
-    NSDictionary *attributes = @{NSFontAttributeName : font,
-                                 NSForegroundColorAttributeName: foregroundColor};
-    NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
-CGRect textFrame = [&lt;#topic.text#&gt; boundingRectWithSize:size
-                                       options:options
-                                    attributes:attributes
-                                       context:nil];</string>
+	<string>UIFont *font = label.font;
+CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
+UIColor *foregroundColor = label.textColor;
+NSDictionary *attributes = @{NSFontAttributeName : font,
+                             NSForegroundColorAttributeName: foregroundColor};
+NSStringDrawingOptions options =  NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
+CGRect textFrame = [label.text boundingRectWithSize:size
+                                            options:options
+                                         attributes:attributes
+                                            context:nil];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>0E95E0F2-C905-425C-87EE-1EC7487B6ED2</string>
 	<key>IDECodeSnippetLanguage</key>
