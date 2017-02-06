@@ -15,7 +15,7 @@
 self.&lt;#answerBtn#&gt; = btn;
 [self.&lt;#answerBtn#&gt; customButtonWithType:UIButtonCustomType_Four];
 
-[btn setTitle:@"已有账号,开始答题" forState:UIControlStateNormal];
+[btn setTitle:@"title" forState:UIControlStateNormal];
 WeakSelf(weakSelf);
 [self.&lt;#answerBtn#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
     make.height.mas_equalTo(52);

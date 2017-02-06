@@ -19,7 +19,7 @@
     [btn setBackgroundImage:image forState:UIControlStateNormal];
     [btn setBackgroundImage:highlightedImage forState:UIControlStateHighlighted];
     [btn setBackgroundImage:disableImage forState:UIControlStateDisabled];
-    self.buyBtn = btn;</string>
+self.&lt;#btn#&gt; = btn;</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>2E5643D1-F796-4BAC-8BF9-873AA2672DB5</string>
 	<key>IDECodeSnippetLanguage</key>

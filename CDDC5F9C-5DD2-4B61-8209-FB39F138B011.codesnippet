@@ -9,13 +9,13 @@
 		<string>CodeBlock</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string> [self.&lt;#gsjhHelperView#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
+	<string> [self.&lt;#view#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.mas_top).with.offset(0);
         make.left.equalTo(weakSelf.mas_left).with.offset(0);
         make.right.equalTo(weakSelf.mas_right).with.offset(0);
         make.centerY.mas_equalTo(weakSelf.contentView.mas_centerY);
-        make.height.mas_equalTo(@(60));
-        make.width.mas_equalTo(@(14));
+        make.height.mas_equalTo(60);
+        make.width.mas_equalTo(14);
     }];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>CDDC5F9C-5DD2-4B61-8209-FB39F138B011</string>

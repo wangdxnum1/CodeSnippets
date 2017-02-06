@@ -11,13 +11,13 @@
 	<key>IDECodeSnippetContents</key>
 	<string>UIView *view = [[UIView alloc]initWithFrame:CGRectZero];
     [self.contentView addSubview:view];
-    self.rightView = view;
+self.&lt;#rightView#&gt; = view;
     WeakSelf(weakSelf);
-    [self.rightView mas_makeConstraints:^(MASConstraintMaker *make) {
+[self.&lt;#rightView#&gt; mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(weakSelf.contentView.mas_top);
         make.bottom.equalTo(weakSelf.contentView.mas_bottom);
         make.right.mas_equalTo(weakSelf.contentView);
-        make.width.mas_equalTo(2 * kRightViewPadding + 17);
+        make.width.mas_equalTo(34);
     }];</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>160E7F5E-31B3-43D0-AFB6-8FE6A1295B51</string>
